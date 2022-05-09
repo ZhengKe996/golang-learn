@@ -3,13 +3,13 @@ package main
 import "tree"
 
 func main() {
-	var root tree.treeNode
-	root = treeNode{value: 3}
-	root.left = &treeNode{}
-	root.right = &treeNode{5, nil, nil}
+	var root tree.Node
+	root = tree.Node{Value: 3}
+	root.Left = &tree.Node{}
+	root.Right = &tree.Node{5, nil, nil}
 
-	root.right.left = new(treeNode)
+	root.Right.Left = new(tree.Node)
 
-	root.left.right = createTreeNode(2)
-	root.print()
+	root.Left.Right = tree.CreateNode(2)
+	root.Print()
 }
